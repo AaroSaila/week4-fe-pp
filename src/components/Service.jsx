@@ -1,4 +1,4 @@
-const Service = ({ icon, title, text }) => {
+const Service = ({ icon, title, text, onHide, id }) => {
   return (
     <article className='service'>
       <span className='service-icon'>
@@ -8,6 +8,9 @@ const Service = ({ icon, title, text }) => {
         <h4 className='service-title'>{title}</h4>
         <p className='service-text'>{text}</p>
       </div>
+      <button onClick={() => onHide(id)}>
+        Hide
+      </button>
     </article>
   )
 }
